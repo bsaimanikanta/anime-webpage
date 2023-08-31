@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .gallery-container {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+  }
+
+  .gallery {
+    display: flex;
+    width: 300%; /* Three times the width for three images */
+    transition: transform 0.5s ease;
+  }
+
+  .gallery img {
+    width: 33.33%; /* Each image takes up 1/3 of the container width */
+    height: auto;
+  }
+</style>
+</head>
+<body>
+<div class="gallery-container">
+  <div class="gallery">
+    <img src="images/aot.jpg" alt="Image 1">
+    <img src="images/dn5.jpg" alt="Image 2">
+    <img src="images/hai.jpg" alt="Image 3">
+    <img src="images/op5.jpg" alt="Image 4">
+  </div>
+</div>
+
+<script>
+  const galleryContainer = document.querySelector('.gallery-container');
+  const gallery = document.querySelector('.gallery');
+  
+  galleryContainer.addEventListener('scroll', () => {
+    const scrollPercentage = (galleryContainer.scrollLeft / (gallery.scrollWidth - galleryContainer.clientWidth)) * 100;
+    const translateXValue = -scrollPercentage * 2; // Adjust the multiplier to control the scrolling speed
+
+    gallery.style.transform = `translateX(${translateXValue}%)`;
+  });
+</script>
+</body>
+</html>

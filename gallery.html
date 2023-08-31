@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animehype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="gallery.css"> 
+</head>
+
+<body>
+    <div class="overlay"></div>
+  
+    <div class="wrapper">
+        <header>
+            
+            <a href="#">
+                <img src="images/AnimeLogo.png" alt="anime logo" width="500px">
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="gallery.html" class="active">GALLERY</a></li>
+                    <li><a href="aboutme.html">ABOUT ME</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="gallery-container">
+                <img class="gallery-image" id="galleryImage" src="images/aot.jpg" alt="Gallery Image">
+            </div> 
+
+            <script>
+                const images = [
+                  "images/aot.jpg",
+                  "images/hai.jpg",
+                  "images/dn5.jpg",
+                  "images/op5.jpg"
+                  // Add more image URLs as needed
+                ];
+                
+                const imageElement = document.getElementById("galleryImage");
+                let currentImageIndex = 0;
+              
+                function updateImage() {
+                  imageElement.src = images[currentImageIndex];
+                  currentImageIndex = (currentImageIndex + 1) % images.length;
+                }
+              
+                setInterval(updateImage, 1000); // Change image every 5 seconds
+              </script>
+              </body>
+            
+            <h1>All time best anime according to ratings:</h1>
+            <div class="gc">
+                
+                <div class="card card1">
+                    <div class="card_details">
+                        <div>
+                            <a href="jujutsu.html" class="anime_title">One piece</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card2">
+                    <div class="card_details">
+                        <div>
+                            <a href="bsd.html" class="anime_title">Death Note</a>
+                          </div>
+                     </div>
+                </div>
+                <div class="card card3">
+                    <div class="card_details">
+                        <div>
+                            <a href="hori.html" class="anime_title">Haikyuu!</a>
+                       </div>
+                   </div>
+                </div> 
+                <div class="card card4">
+                    <div class="card_details">
+                        <div>
+                            <a href="zom.html" class="anime_title">Attack on Titan</a>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="card card5">
+                    <div class="card_details">
+                        <div>
+                            <a href="zom.html" class="anime_title">Your Name</a>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="card card6">
+                    <div class="card_details">
+                        <div>
+                            <a href="zom.html" class="anime_title">Jujutsu Kaisen</a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+        </main>
+    </div>
+   
+</body>
+</html>

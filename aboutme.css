@@ -1,0 +1,363 @@
+html {
+    font: 50%;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: 'Poppins';
+    height: 130%;
+    width: 100%;
+}
+
+
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 150px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    width: 90%;
+    gap: 15em;
+}
+
+
+nav {
+    margin: 8em;
+
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 5em;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+nav ul li a.active:before {
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+
+nav ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid grey;
+    bottom: -6px;
+    transition: .3s;
+}
+
+main {
+    
+    gap: 8em;
+    margin: 0;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+
+.left_col {
+    width: 45%;
+}
+
+.right_col {
+    flex-grow: 2;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    gap: 0;
+    padding-top: 110px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    margin: 0;
+}
+
+.subhead {
+    font-size: 1.8rem;
+}
+
+
+
+
+/* .news:before {
+    position: absolute;
+    content: "";
+   
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: -20px;
+    z-index: 2;
+} */
+
+
+
+
+
+.interest {
+    display: grid;
+    padding-top: 100px;
+    gap: 2.3rem;
+    grid-template-columns: auto auto auto;
+    
+    /* grid-template-areas: 
+    "left ."
+    "left ."
+    "right ."; */
+}
+
+.card {
+    border-radius: .8em;
+    padding: 1.1em;
+    display: flex;
+    
+    align-items: end;
+    background-size: 100%;
+    transition: background-size 800ms;
+    height: 500px;
+    width: 75%;
+}
+
+.card1 {
+    background-image: url('images/op5.jpg');
+}
+
+.card2 {
+    background-image: url('images/dn5.jpg'); 
+ 
+}
+
+.card3 {
+    background-image: url('images/hai.jpg');
+}
+
+
+.card4 {
+    background-image: url('images/aot.jpg');
+}
+
+.card5 {
+    background-image: url('images/yn.jpg');
+}
+
+.card6 {
+    background-image: url('images/MV5BMTMwMDM4N2EtOTJiYy00OTQ0LThlZDYtYWUwOWFlY2IxZGVjXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg');
+}
+
+.card_details {
+    background: white;
+    border-radius: .8em;
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 800ms;
+}
+
+.card_details a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.card_details p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+p.rating {
+    font-size: 1.8rem;
+}
+
+nav ul li a:hover:before {
+    width: 55%;
+}
+
+.primary_cta:hover {
+    background: rgb(0, 128, 90);
+}
+
+
+.card:hover {
+   background-size: 160%;
+   
+}
+
+.card:hover .card_details {
+    transform: translateY(-20px);
+}
+
+.overlay{
+    position: absolute;
+    z-index: 999;
+    background: grey;
+    width: 100%;
+    height: 2500px;
+    animation: reveal 1s ease-in forwards;
+    transform-origin: bottom;
+   
+}
+
+@keyframes reveal {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }
+}
+
+
+@keyframes growIn {
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 800px){
+    .wrapper {
+        padding-left: 50px;
+        margin-left: 10px;
+    }
+
+    .right_col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tp{
+        width: 200px;
+       
+    }
+
+    main {
+        animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+        transform: scale(.4);
+        margin: 0;
+        margin-right: 30px;
+        width: 100%;
+    }
+
+    p.heap {
+        font-size: 1.7rem;
+        font-weight: 150px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 200px;
+        width: 700px;
+        gap: 0px;
+        margin-right: 20px;
+        padding-right: 50px;
+    }
+
+    nav {
+        
+        margin: 0;
+        border: 0;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 2em;
+        margin: 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        position: relative;
+    }
+
+    .subhead {
+        font-size: 1.5rem;
+        margin-top: 100px;
+    }
+
+    h1 {
+        font-size: 3.1rem;
+        font-family: 'Playfair Display';
+        font-weight: 200;
+        margin-top: 100px;
+    }
+   
+    header img {
+        width: 300px;
+    }
+
+    body {
+        display: flex;
+        margin: 0;
+        font-family: 'Poppins';
+        height: 130%;
+        width: 100%;
+    }
+
+    .primary_cta {
+        background-color: turquoise;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+        border-radius: 1.9em;
+        padding: 1em 1em;
+    }
+
+    .news {
+        display: flex; 
+        gap: 3em;
+        padding: 3em;
+        border: 1px solid black;
+        border-radius: .8em;
+        position: relative;
+        width: 300px;
+        margin-top: 200px;
+    }
+
+    .overlay{
+        position: absolute;
+        z-index: 999;
+        background: grey;
+        width: 100%;
+        height: 300%;
+        animation: reveal 1s ease-in forwards;
+        transform-origin: bottom;
+      
+    }
+}
